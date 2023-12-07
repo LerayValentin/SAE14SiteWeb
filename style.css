@@ -1,0 +1,271 @@
+body {
+    font-family: Courier;
+    line-height: 1.3;
+    width: 100%;
+    margin: auto;
+}
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#main1{
+    height: 90vh;
+}
+/* Style sommaire */
+.sommaire {
+    color: #ffffff;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* Style liens sommaire */
+.sommaire a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s;
+    margin: 0 15px;
+}
+/* Style liens sommaire survol */
+.sommaire a:hover {
+    color: #fca400;
+}
+/*Style lien trad*/
+.trad{
+    position: absolute;
+    left: 20px;
+    color: #ddd;
+    font-size: 20px;
+    background-color: rgb(1, 1, 22);
+    border: solid #fca400;
+    padding: 10px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+/* Style ancres*/
+.anchor{
+    color: #fca400;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+/* Image de fond*/
+#fond{
+    height : auto;
+    width : 100vw;
+    position : fixed;
+    top:0px;
+    left : 0px;
+    z-index: -10;
+}
+main{
+    height : 100vh;
+}
+/*Div*/
+.div{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+#div2{
+    width: 800px;
+}
+#div3{
+    width: 1300px;
+}
+/* Style sections */
+.section {
+    border: solid #fca400;
+    border-radius: 40px;
+    width: 70%;
+    color: #ffffff;
+    margin-bottom: 30px;
+    background-color: rgb(1, 1, 22);
+}
+/* Titres */
+.soustitre{
+    color: #ffffff;
+    font-size: 50px;
+    text-align: center;
+}
+#interet{
+    width: 1100px;
+    margin-bottom: 10px;
+}
+#titreaccueil{
+    color: #ffffff;
+    text-align: center;
+    font-size: 300%;
+    font-family: Courier;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+/* Style articles */
+.article {
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: center;
+    flex-flow: column wrap ;
+    padding: 40px;
+    line-height: 25px;
+}
+.article ul{
+    padding: none;
+}
+.article li{
+    padding-bottom: 20px;
+
+}
+#p3art1, #p3art2, #p3art3{
+    text-indent: 40px;
+}
+/* Style photos */
+.pfp {
+    border-radius: 100%;
+    width: 20%;
+    align-self: center;
+}
+#cube{
+    height: 20vh;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+/* Style Menu*/
+.menu {
+    text-align: center;
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu li {
+    display: inline-block;
+    position: relative;
+}
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(1, 1, 22); 
+    border: solid #fca400;
+}
+#sousmenu1fr{
+    width: 158px;
+}
+#sousmenu2fr{
+    width: 360px;
+}
+#sousmenu1en{
+    width: 130px;
+}
+#sousmenu2en{
+    width: 342px;
+}
+.menu ul li:hover > ul {
+    display: inherit;
+}
+.menu a:hover {
+    background-color: #fca400;
+    transition: 0.2s;
+    color: #fff;
+}
+.menu ul ul a {
+    padding: 10px 15px;
+    display: block;
+    color: #ffffff;
+}
+.menu ul ul li {
+    display: block;
+}
+.menu ul ul a:hover {
+    background-color: #fca400;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1366px) {
+    #fond{
+        width : max-content;
+    }
+    #div3{
+        width: fit-content;
+    }
+}
+@media screen and (max-width: 1200px) {
+    #interet{
+        width : auto;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .trad{
+        position: relative;
+        left: 0px;
+        margin-bottom: 20px;
+    }
+    #cube{
+        height: 10vh;
+    }
+}
+@media screen and (max-width: 760px) {
+    .menu ul {
+        display: block;
+        width: 100%;
+    }
+    .menu li {
+        display: block;
+        width: 100%;
+    }
+    .menu ul ul {
+        position: static;
+        width: 100%;
+        display: none;
+    }
+    .menu ul li:hover > ul {
+        display: none;
+    }
+    .menu ul li {
+        border-bottom: 1px solid #ddd;
+    }
+}
+@media screen and (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav a {
+        margin: 10px;
+    }
+    #div2{
+        width: 590px;
+    }
+    #div3{
+        width: 590px;
+    }
+    #titreaccueil{
+        margin-top: 100px;
+    }
+    #cube{
+        display: none;
+    }
+    .sommaire{
+        display: none;
+    }
+}
